@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Session: {{ Session.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ Session.title }}</h1>
+    <p>
+      This session has been scheduled on {{ Session.date }} from {{ Session.startTime}} to
+        {{ Session.endTime }} at {{ Session.Location }}
+    </p>
+
+    <a href="{% url 'welcome' %}">Return to Home</a>
+{% endblock %}

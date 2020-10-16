@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}WikiImageViewer{% endblock %}
+
+{% block content %}
+<h1></h1>
+<form method="post">
+    <table>
+        {{ form  }}
+    </table>
+    {% csrf_token %}
+    <button type="submit">Find Images</button>
+</form>
+
+
+{% endblock %}
