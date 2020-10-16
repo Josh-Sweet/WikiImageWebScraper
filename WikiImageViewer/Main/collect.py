@@ -9,7 +9,7 @@ def collect(URL):
 
     URLcontents = requests.get(mainURL)
 
-    # Gets a soup object frin the contents gathered from the URL
+    # Gets a soup object from the contents gathered from the URL
     soup = bs(URLcontents.text, features="html.parser")
 
     # Gets each image URL

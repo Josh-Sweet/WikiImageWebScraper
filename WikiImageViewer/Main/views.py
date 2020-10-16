@@ -8,7 +8,7 @@ form = modelform_factory(WikiPage, exclude=[])
 
 
 # Renders the session form model and manages the input
-def MainPage(request):
+def main_page(request):
     if request.method == "POST":
         # Should sanitized first
         URLform = form(request.POST)
@@ -17,6 +17,5 @@ def MainPage(request):
             images = collect(URLform.cleaned_data['URL'])
             # Renders the image page wih all of the images gathered on it.
             return render(request, "Main/images.html", {"images": images})
-    else:
-        URLform = form()
+
     return render(request, "Main/MainPage.html", {"form": form})
